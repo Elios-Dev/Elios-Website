@@ -127,7 +127,7 @@ private extension Node where Context == HTML.BodyContext {
 
         return .header(
             .wrapper(
-                .img(.class("header-image"), .src("/images/elios-logo.png"), .alt(context.site.name)),
+                .img(.class("header-image"), .src("/Images/elios-logo.png"), .alt(context.site.name)),
                 .if(sectionIDs.count > 1,
                     .nav(
                         .ul(.forEach(sectionIDs) { section in
