@@ -142,6 +142,35 @@ private extension Node where Context == HTML.BodyContext {
             )
         )
     }
+    
+    static func contactForm() -> Node {
+        .wrapper(
+            .form(
+                .attribute(named: "netlify"),
+                .p(
+                    .label(
+                        .text("Name"),
+                        .input(.name("Name"), .type(.text))
+                    )
+                ),
+                .p(
+                    .label(
+                        .text("Email"),
+                        .input(.name("Email"), .type(.email))
+                    )
+                ),
+                .p(
+                    .label(
+                        .text("Message"),
+                        .input(.name("Message"), .type(.text))
+                    )
+                ),
+                .p(
+                    .input(.type(.submit), .name("Submit"))
+                )
+            )
+        )
+    }
 
     static func itemList<T: Website>(for items: [Item<T>], on site: T) -> Node {
         return .ul(
@@ -170,6 +199,7 @@ private extension Node where Context == HTML.BodyContext {
 
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
+            .contactForm(),
             .p(
                 .text("Generated using "),
                 .a(
