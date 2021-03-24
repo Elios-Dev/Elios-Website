@@ -26,6 +26,6 @@ struct EliosDevGithubIo: Website {
 // This will generate your website using the built-in Foundation theme:
 try EliosDevGithubIo()
     .publish(using: [
-        .generateHTML(withTheme: .foundation),
+        .generateHTML(withTheme: .elios),
         .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: true))
     ])
