@@ -193,7 +193,7 @@ footer {
 div.img-area {
     height: 300px;
     width: 100%;
-    background: url('form-background.jpg'),
+    background-image: url("images/form-background.jpg");
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
