@@ -27,6 +27,6 @@ struct EliosDevGithubIo: Website {
 try EliosDevGithubIo()
     .publish(using: [
         .generateHTML(withTheme: .elios),
-        .copyFiles(at: "Resources/Images", to: nil, includingFolder: true),
+        .copyFiles(at: "Resources/images", to: nil, includingFolder: true),
         .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: true))
     ])
