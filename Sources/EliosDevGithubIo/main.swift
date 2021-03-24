@@ -16,9 +16,9 @@ struct EliosDevGithubIo: Website {
     }
 
     // Update these properties to configure your website:
-    var url = URL(string: "https://your-website-url.com")!
-    var name = "EliosDevGithubIo"
-    var description = "A description of EliosDevGithubIo"
+    var url = URL(string: "https://www.elios.ie")!
+    var name = "Elios Software Solutions"
+    var description = "Elios Software Solutions is an iOS and Swift Consultancy"
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
@@ -27,5 +27,5 @@ struct EliosDevGithubIo: Website {
 try EliosDevGithubIo()
     .publish(using: [
         .generateHTML(withTheme: .foundation),
-        .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: false))
+        .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: true))
     ])
