@@ -20,7 +20,7 @@ struct EliosDevGithubIo: Website {
     var name = "Elios Software Solutions"
     var description = "Elios Software Solutions is an iOS and Swift Consultancy."
     var language: Language { .english }
-    var imagePath: Path? { nil }
+    var imagePath: Path? { "Images/elios-logo.png" }
 }
 
 // This will generate your website using the built-in Foundation theme:
