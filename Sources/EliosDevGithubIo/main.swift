@@ -18,7 +18,7 @@ struct EliosDevGithubIo: Website {
     // Update these properties to configure your website:
     var url = URL(string: "https://www.elios.ie")!
     var name = "Elios Software Solutions"
-    var description = "Elios Software Solutions is an iOS and Swift Consultancy"
+    var description = "Elios Software Solutions is an iOS and Swift Consultancy."
     var language: Language { .english }
     var imagePath: Path? { nil }
 }
