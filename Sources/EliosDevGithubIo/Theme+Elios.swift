@@ -145,28 +145,39 @@ private extension Node where Context == HTML.BodyContext {
     
     static func contactForm() -> Node {
         .wrapper(
-            .form(
-                .attribute(named: "netlify"),
-                .p(
-                    .label(
-                        .text("Name"),
-                        .input(.name("Name"), .type(.text))
+            .class("form-wapper"),
+            .div(
+                .class("form-area"),
+                    .div(
+                        .class("img-area"),
+                        .div(
+                            .class("left-text"),
+                            .i(
+                                .class("fa fa-map-marker"),
+                                .text("address")
+                            ),
+                            .p(
+                                .text("47 Willow Drive, Dunshaughlin, Co. Meath, Ireland")
+                            ),
+                            .i(
+                                .class("fa fa-envelope"),
+                                .text("address")
+                            ),
+                            .p(
+                                .text("niall@elios.ie")
+                            )
+                        )
+                    ),
+                .div(
+                    .class("right-text"),
+                    .h2(.text("Get in Touch")),
+                    .form(
+                        .attribute(named: "netlify"),
+                        .input(.name("Name"), .type(.text), .placeholder("Enter Your Name")),
+                        .input(.name("Email"), .type(.email), .placeholder("Enter Your Email")),
+                        .textarea(.name(""), .cols(30), .rows(10), .id("")),
+                        .input(.type(.submit), .name("Submit"))
                     )
-                ),
-                .p(
-                    .label(
-                        .text("Email"),
-                        .input(.name("Email"), .type(.email))
-                    )
-                ),
-                .p(
-                    .label(
-                        .text("Message"),
-                        .input(.name("Message"), .type(.text))
-                    )
-                ),
-                .p(
-                    .input(.type(.submit), .name("Submit"))
                 )
             )
         )
