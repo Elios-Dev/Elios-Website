@@ -6,7 +6,9 @@ import Plot
 struct EliosDevGithubIo: Website {
     enum SectionID: String, WebsiteSectionID {
         // Add the sections that you want your website to contain here:
-        case posts
+        case articles
+        case apps
+        case about
     }
 
     struct ItemMetadata: WebsiteItemMetadata {
@@ -22,4 +24,8 @@ struct EliosDevGithubIo: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try EliosDevGithubIo().publish(withTheme: .foundation)
+try EliosDevGithubIo()
+    .publish(using: [
+        .generateHTML(withTheme: .foundation),
+        .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: false))
+    ])
