@@ -1,7 +1,7 @@
 ---
 date: 2021-03-24 11:10
 description: A description of my first post.
-tags: first, article
+tags: first, post
 ---
 # My first post
 

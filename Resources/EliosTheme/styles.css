@@ -45,16 +45,28 @@ header .site-name {
 
 nav {
     margin-top: 20px;
+    display:inline-block;
+}
+
+nav ul {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow:0 0 50px  rgba(0,0,0,0.3);
 }
 
 nav li {
     display: inline-block;
-    margin: 0 7px;
+    padding: 5px 10px;
     line-height: 1.5em;
 }
 
-nav li a.selected {
-    text-decoration: underline;
+nav li:hover {
+  background-color: #bdbdbd;
+}
+
+nav li.selected {
+   background-color: #eee;
 }
 
 h1 {
@@ -142,7 +154,6 @@ footer {
 }
 
 .form-wapper {
-    height: 100vh;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -150,7 +161,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #0181ff, #00b6ff);
+    background: #fff;
 }
 
 .form-area {
@@ -193,7 +204,7 @@ footer {
 div.img-area {
     height: 300px;
     width: 100%;
-    background-image: url("images/form-background.jpg");
+    background-image: url("images/form-background.jpeg");
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
@@ -266,6 +277,23 @@ div.img-area {
     header {
         background-color: #000;
     }
+    
+    .form-wapper {
+        background: #222;
+    }
+
+    nav ul {
+      background-color: #222;
+    }
+    
+    nav li:hover {
+      background-color: #333;
+    }
+    
+    nav li.selected {
+       background-color: #333;
+    }
+
 }
 
 @media(max-width: 600px) {

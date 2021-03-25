@@ -128,12 +128,17 @@ private extension Node where Context == HTML.BodyContext {
         return .header(
             .wrapper(
                 .img(.class("header-image"), .src("/images/elios-logo.png"), .alt(context.site.name)),
+                .p(.text(context.site.description)),
                 .if(sectionIDs.count > 1,
                     .nav(
-                        .ul(.forEach(sectionIDs) { section in
-                            .li(.a(
-                                .class(section == selectedSection ? "selected" : ""),
-                                .href(context.sections[section].path),
+                        .ul(
+                          .li(.class(selectedSection == nil ? "selected" : ""),
+                            .a(.href("/"),
+                                .text("Home")
+                            )),
+                          .forEach(sectionIDs) { section in
+                            .li(.class(section == selectedSection ? "selected" : ""),
+                              .a(.href(context.sections[section].path),
                                 .text(context.sections[section].title)
                             ))
                         })
@@ -145,32 +150,14 @@ private extension Node where Context == HTML.BodyContext {
     
     static func contactForm() -> Node {
         .wrapper(
-            .class("form-wapper"),
+            .class("wrapper form-wapper"),
             .div(
                 .class("form-area"),
                     .div(
-                        .class("img-area"),
-                        .div(
-                            .class("left-text"),
-                            .i(
-                                .class("fa fa-map-marker"),
-                                .text("address")
-                            ),
-                            .p(
-                                .text("47 Willow Drive, Dunshaughlin, Co. Meath, Ireland")
-                            ),
-                            .i(
-                                .class("fa fa-envelope"),
-                                .text("address")
-                            ),
-                            .p(
-                                .text("niall@elios.ie")
-                            )
-                        )
+                        .class("img-area")
                     ),
                 .div(
                     .class("right-text"),
-                    .h2(.text("Get in Touch")),
                     .form(
                         .attribute(named: "netlify"),
                         .input(.name("Name"), .type(.text), .placeholder("Enter Your Name")),
@@ -210,6 +197,7 @@ private extension Node where Context == HTML.BodyContext {
 
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
+            .h1("Get in touch"),
             .contactForm(),
             .p(
                 .text("Generated using "),
