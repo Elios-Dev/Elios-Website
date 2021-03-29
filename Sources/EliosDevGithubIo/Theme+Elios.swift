@@ -166,9 +166,9 @@ private extension Node where Context == HTML.BodyContext {
             .class("form-wapper"),
             .div(
                 .class("form-area"),
-                    .div(
-                        .class("img-area")
-                    ),
+                .div(
+                    .class("img-area")
+                ),
                 .div(
                     .class("right-text"),
                     .form(

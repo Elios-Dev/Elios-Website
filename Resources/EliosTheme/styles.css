@@ -174,7 +174,6 @@ a {
     align-items: center;
     justify-content: center;
     margin: 30px;
-    box-shadow: 0 40px 20px rgba(0,0,0,0.5);
 }
 
 .img-area {
@@ -278,6 +277,10 @@ div.img-area {
     }
     
     .form-wapper {
+        background: #222;
+    }
+    
+    .form-area {
         background: #222;
     }
 
