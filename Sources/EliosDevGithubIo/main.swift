@@ -24,9 +24,12 @@ struct EliosDevGithubIo: Website {
 }
 
 // This will generate your website using the built-in Foundation theme:
-try EliosDevGithubIo()
-    .publish(using: [
-        .generateHTML(withTheme: .elios),
-        .copyFiles(at: "Resources/images", to: nil, includingFolder: true),
-        .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: true))
-    ])
+// try EliosDevGithubIo()
+//     .publish(using: [
+//         .generateHTML(withTheme: .elios),
+//         .addMarkdownFiles(),
+//         .copyFiles(at: "Resources/images", to: nil, includingFolder: true),
+//         .deploy(using: .gitHub("elios-dev/elios-dev.github.io", useSSH: true))
+//     ])
+
+try EliosDevGithubIo().publish(withTheme: .elios)
