@@ -235,12 +235,14 @@ div.img-area {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 12px;
+    border: 0;
 }
 
 .right-text textarea {
     width: 100%;
     padding: 10px;
     border-radius: 12px;
+    margin-bottom: 15px;
 }
 
 @media screen and (min-width: 768px) {
