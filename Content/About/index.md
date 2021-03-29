@@ -1,4 +1,4 @@
-#  About
+# About
 
 ## Developing iOS, MacOS, Apple Watch and Web Applications for a wide variety of customers.
 
@@ -8,5 +8,5 @@ Niall holds a Batchelor of Science Degree in Computing from National College of 
 
 Niall holds a Batchelor of Science Degree in Computing from National College of Ireland, where he was awarded first class honours. Niall completed his degree via night and weekend study while working for Popdeem.
 
-Prior to becoming a software developer, Niall was a professional race driver. If you are interested, you can learn more about that [here](https://www.niallquinn.racing).
+Prior to becoming a software developer, Niall was a professional race driver. If you are interested, you can learn more about that [here](https://www.niallquinn.com).
 

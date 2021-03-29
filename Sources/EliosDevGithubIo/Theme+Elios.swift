@@ -35,15 +35,28 @@ private struct EliosHTMLFactory<Site: Website>: HTMLFactory {
 
     func makeSectionHTML(for section: Section<Site>,
                          context: PublishingContext<Site>) throws -> HTML {
-        HTML(
+        
+        func bodyContent() -> Node<HTML.BodyContext> {
+            if section.items.isEmpty {
+                return
+                    .wrapper(
+                        Node.contentBody(section.body)
+                    )
+            } else {
+                return
+                    .wrapper(
+                        .h1(.text(section.title)),
+                        Node.itemList(for: section.items, on: context.site)
+                    )
+            }
+        }
+        
+        return HTML(
             .lang(context.site.language),
             .head(for: section, on: context.site),
             .body(
                 .header(for: context, selectedSection: section.id),
-                .wrapper(
-                    .h1(.text(section.title)),
-                    .itemList(for: section.items, on: context.site)
-                ),
+                bodyContent(),
                 .footer(for: context.site)
             )
         )
@@ -150,7 +163,7 @@ private extension Node where Context == HTML.BodyContext {
     
     static func contactForm() -> Node {
         .wrapper(
-            .class("wrapper form-wapper"),
+            .class("form-wapper"),
             .div(
                 .class("form-area"),
                     .div(
@@ -197,8 +210,10 @@ private extension Node where Context == HTML.BodyContext {
 
     static func footer<T: Website>(for site: T) -> Node {
         return .footer(
-            .h1("Get in touch"),
-            .contactForm(),
+            .wrapper(
+                .h1("Get in touch"),
+                .contactForm()
+            ),
             .p(
                 .text("Generated using "),
                 .a(
