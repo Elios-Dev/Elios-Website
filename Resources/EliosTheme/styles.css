@@ -236,6 +236,7 @@ div.img-area {
     padding: 10px;
     border-radius: 12px;
     border-color: #eee;
+    border-style: solid;
 }
 
 .right-text textarea {
