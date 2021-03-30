@@ -235,12 +235,16 @@ div.img-area {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 12px;
+    border-color: #eee;
 }
 
 .right-text textarea {
     width: 100%;
     padding: 10px;
     border-radius: 12px;
+    margin-bottom: 15px;
+    border-color: #eee;
+    border-style: solid;
 }
 
 @media screen and (min-width: 768px) {
@@ -294,6 +298,14 @@ div.img-area {
     
     nav li.selected {
        background-color: #333;
+    }
+    
+    .right-text input {
+        border-color:#eee
+    }
+
+    .right-text textarea {
+        border-color: #eee
     }
 
 }
