@@ -1,3 +1,3 @@
-# My Articles
+# Articles
 
 Articles coming soon!

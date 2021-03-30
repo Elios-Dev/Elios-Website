@@ -1,4 +1,4 @@
-#  My Apps
+# Apps
 
 Apps coming soon!
 
